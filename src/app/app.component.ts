@@ -16,7 +16,7 @@ export class AppComponent {
       'img': 'tenet',
       'Duration': '2h 30 min',
       'Genre': 'Action, Sci-Fi',
-      'Released date': '3 September 2020',
+      'ReleasedDate': '3 September 2020',
       'Trailer Link': 'https://www.youtube.com/watch?v=LdOM0x0XDMo'
     },
     {
@@ -26,7 +26,7 @@ export class AppComponent {
       'img': 'spider',
       'Duration': '1h 57min',
       'Genre': 'Action, Animation, Adventure',
-      'Released date': '14 December 2018',
+      'ReleasedDate': '14 December 2018',
       'Trailer Link': 'https://www.youtube.com/watch?v=tg52up16eq0'
     },
     {
@@ -36,7 +36,7 @@ export class AppComponent {
       'img': 'knives',
       'Duration': '2h 10min',
       'Genre': 'Comedy, Crime, Drama',
-      'Released date': '27 November 2019',
+      'ReleasedDate': '27 November 2019',
       'Trailer Link': 'https://www.youtube.com/watch?v=qGqiHJTsRkQ'
     },
     {
@@ -46,7 +46,7 @@ export class AppComponent {
       'img': 'guardians',
       'Duration': '2h 1min',
       'Genre': 'Action, Adventure, Comedy',
-      'Released date': '1 August 2014',
+      'ReleasedDate': '1 August 2014',
       'Trailer Link':' https://www.youtube.com/watch?v=d96cjJhvlMA'
     },
     {
@@ -56,7 +56,7 @@ export class AppComponent {
       'img': 'avengers',
       'Duration': '2h 21min',
       'Genre': 'Action, Adventure, Sci-Fi',
-      'Released date': '1 May 2015',
+      'ReleasedDate': '1 May 2015',
       'Trailer Link': 'https://www.youtube.com/watch?v=tmeOjFno6Do',
     }
   ];

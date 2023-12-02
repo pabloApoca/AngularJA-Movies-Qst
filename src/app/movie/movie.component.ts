@@ -18,4 +18,8 @@ export class MovieComponent implements OnInit{
   imageRender(image:string) {
     return `bg-${image}`;
   }
+
+  year(date:string) {
+    return date.substr(-4);
+  }
 }

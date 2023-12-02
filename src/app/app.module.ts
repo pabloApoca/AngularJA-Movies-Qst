@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {MatCardModule} from '@angular/material/card';
+import {NgOptimizedImage} from '@angular/common';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
+
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,7 +18,10 @@ import { MovieComponent } from './movie/movie.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatCardModule,
+    NgOptimizedImage,
+    MatIconModule,
+    MatDividerModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

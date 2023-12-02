@@ -13,13 +13,5 @@ export class MovieComponent implements OnInit{
 
   ngOnInit(): void {
   }
-  
 
-  imageRender(image:string) {
-    return `bg-${image}`;
-  }
-
-  year(date:string) {
-    return date.substr(-4);
-  }
 }

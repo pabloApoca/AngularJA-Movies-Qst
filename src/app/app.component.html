@@ -1,5 +1,25 @@
-<p>Select movie to see</p>
 
-<div class="w-full flex justify-center items-center">
-    <app-movie [movie]="movie" *ngFor="let movie of movies"></app-movie>
+<div class="w-full mt-20 mb-3 flex justify-center items-center gap-2">
+    <button mat-raised-button>Action</button>
+    <button mat-raised-button>Animation</button>
+    <button mat-raised-button>Sci-Fi</button>
+    <button mat-raised-button>Adventure</button>
+    <button mat-raised-button>Comedy</button>
+    <button mat-raised-button>Crime</button>
+    <button mat-raised-button>Drama</button>
+</div>
+<mat-divider></mat-divider>
+
+<div>
+  <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+      <div class="w-full flex justify-center items-center mt-10">
+          <app-movie [movie]="movie" *ngFor="let movie of movies"></app-movie>
+      </div>
+      <div class="w-full flex justify-center items-center mt-10">
+          <app-movie [movie]="movie" *ngFor="let movie of movies"></app-movie>
+      </div>
+      <div class="w-full flex justify-center items-center mt-10">
+          <app-movie [movie]="movie" *ngFor="let movie of movies"></app-movie>
+      </div>
+  </div>
 </div>

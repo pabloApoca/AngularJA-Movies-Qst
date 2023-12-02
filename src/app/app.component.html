@@ -1,3 +1,5 @@
-<p>Movies</p>
+<p>Select movie to see</p>
 
-<app-movie></app-movie>
+<div class="w-full flex justify-center items-center">
+    <app-movie [movie]="movie" *ngFor="let movie of movies"></app-movie>
+</div>

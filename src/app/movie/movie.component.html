@@ -1,19 +1,11 @@
-<mat-card class="example-card">
-    <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-        <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-        </p>
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-    </mat-card-actions>
-</mat-card>
+<div class="relative card m-2 group cursor-pointer overflow-hidden text-gray-50 h-72 w-56 rounded-2xl hover:duration-700 duration-700">
+  <div class="w-56 {{imageRender(movie.img)}} h-72 bg-center bg-contain">
+  </div>
+  <div class="absolute bg-gray-50 -bottom-6 w-56 h-14 px-3 py-2 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
+    <span class="text-slate-900 font-bold text-xs">{{movie.Title}}</span>
+    <div class="w-full flex justify-between">
+        <span class="text-neutral-800 font-bold">2015</span>
+        <span class="text-neutral-800 text-xs mt-0.5">{{movie.Genre}}</span>
+    </div>
+  </div>
+</div>

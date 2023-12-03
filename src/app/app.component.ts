@@ -63,6 +63,42 @@ export class AppComponent implements OnInit {
         'Trailer Link': 'https://www.youtube.com/watch?v=tmeOjFno6Do',
       }
     ];
+
+    this.sortByReleasedDate();
+    // this.sortByRating();
+    
+  }
+  
+
+  sortByReleasedDate() {
+    const orderMovies = this.movies.slice().sort((a, b) => this.converToDate(a.ReleasedDate) - this.converToDate(b.ReleasedDate));
+    this.movies = orderMovies;
+  }
+
+  sortByRating() {
+    const orderMovies = this.movies.slice().sort((a, b) => b.Rating - a.Rating );
+    this.movies = orderMovies;
+  }
+
+  converToDate(relDate: string) :any {
+    let date: Date = new Date(parseInt(relDate.substr(-4), 10), this.getMonth(relDate), parseInt(relDate.substr(0, 2), 10));
+    return date;
+  }
+
+
+  getMonth(month: string) :any{
+    if(month.includes('January')) return 0;
+    if(month.includes('February')) return 1;
+    if(month.includes('March')) return 2;
+    if(month.includes('April')) return 3;
+    if(month.includes('May')) return 4;
+    if(month.includes('June')) return 5;
+    if(month.includes('July')) return 6;
+    if(month.includes('August')) return 7;
+    if(month.includes('September')) return 8;
+    if(month.includes('October')) return 9;
+    if(month.includes('November')) return 10;
+    if(month.includes('December')) return 11;
   }
   
 }

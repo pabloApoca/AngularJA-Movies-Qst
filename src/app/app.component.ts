@@ -63,15 +63,17 @@ export class AppComponent implements OnInit {
         'Trailer Link': 'https://www.youtube.com/watch?v=tmeOjFno6Do',
       }
     ];
-
-    this.sortByReleasedDate();
-    // this.sortByRating();
     
   }
   
 
+  sortByTtle() {
+    const orderMovies = this.movies.sort((a,b) => a.Title.localeCompare(b.Title));
+    this.movies = orderMovies;
+  }
+
   sortByReleasedDate() {
-    const orderMovies = this.movies.slice().sort((a, b) => this.converToDate(a.ReleasedDate) - this.converToDate(b.ReleasedDate));
+    const orderMovies = this.movies.slice().sort((a, b) => this.converToDate(b.ReleasedDate) - this.converToDate(a.ReleasedDate));
     this.movies = orderMovies;
   }
 
@@ -84,7 +86,6 @@ export class AppComponent implements OnInit {
     let date: Date = new Date(parseInt(relDate.substr(-4), 10), this.getMonth(relDate), parseInt(relDate.substr(0, 2), 10));
     return date;
   }
-
 
   getMonth(month: string) :any{
     if(month.includes('January')) return 0;

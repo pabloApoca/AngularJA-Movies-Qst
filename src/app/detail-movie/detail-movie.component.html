@@ -1,4 +1,4 @@
-<div class="w-full mt-20 flex flex-col">
+<div class="w-full mt-28 flex flex-col">
     <div class="w-full flex">
         <div class="w-2/6">
             <div class="w-full flex justify-end">
@@ -36,7 +36,10 @@
             <div class="w-4/6 flex mt-4">
                 <p class="text-lg font-bold">Synopsis:</p>
                 <p class="mt-0.5 ml-1">{{movie.Description}}</p>
-            </div>    
+            </div>  
+            <div class="my-4 w-96 myButton">
+                <button (click)="addWatchlist()"> <span>{{inWatchlist() ? 'Remove from watchlist' : 'Add to Watchlist'}}</span> </button>
+            </div>            
         </div>
     </div>
 

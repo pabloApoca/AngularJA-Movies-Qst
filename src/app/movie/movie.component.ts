@@ -14,7 +14,7 @@ export class MovieComponent {
 
   selectMovie() {
     localStorage.setItem('movie', JSON.stringify(this.movie));
-    this.router.navigate(['/detail',this.movie.Title]);
+    this.router.navigate(['/movie',this.movie.Title]);
   }
 
 }

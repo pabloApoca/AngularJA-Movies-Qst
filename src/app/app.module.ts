@@ -1,21 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
 import {NgOptimizedImage} from '@angular/common';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 
-
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MovieComponent } from './movie/movie.component';
 import { DetailMovieComponent } from './detail-movie/detail-movie.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieComponent,
-    DetailMovieComponent
+    DetailMovieComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,7 @@ import { DetailMovieComponent } from './detail-movie/detail-movie.component';
     MatIconModule,
     MatDividerModule,
     MatButtonModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

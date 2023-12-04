@@ -1,17 +1,20 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie',
   templateUrl: './movie.component.html',
   styleUrls: ['./movie.component.css']
 })
-export class MovieComponent implements OnInit{
+export class MovieComponent {
 
   @Input() movie:any;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
+  selectMovie() {
+    localStorage.setItem('movie', JSON.stringify(this.movie));
+    this.router.navigate(['/detail',this.movie.Title]);
   }
 
 }

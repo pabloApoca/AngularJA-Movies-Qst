@@ -1,1 +1,50 @@
-<p>detail-movie works!</p>
+<div class="w-full mt-20 flex flex-col">
+    <div class="w-full flex">
+        <div class="w-2/6">
+            <div class="w-full flex justify-end">
+                <img [ngSrc]="movie.img" width="224" height="288">
+            </div>
+        </div>
+        <div class="w-4/6 flex flex-col ml-5">
+            <p class="text-2xl font-bold mb-2">{{movie.Title}}</p>
+    
+            <div class="w-full flex items-center">
+                <p class="text-lg font-bold">Rating:</p>
+                <svg class="mx-1" height="13px" width="13px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                viewBox="0 0 47.94 47.94" xml:space="preserve">
+                <path style="fill:#ED8A19;" d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757
+                c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042
+                c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685
+                c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528
+                c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956
+                C22.602,0.567,25.338,0.567,26.285,2.486z"/>
+                </svg>
+                <p class="mt-0.5">{{movie.Rating}}</p>
+            </div>
+            <div class="w-full flex">
+                <p class="text-lg font-bold">Duration:</p>
+                <p class="mt-0.5 ml-1">{{movie.Duration}}</p>
+            </div>
+            <div class="w-full flex">
+                <p class="text-lg font-bold">Gender:</p>
+                <p class="mt-0.5 ml-1">{{movie.Genre}}</p>
+            </div>
+            <div class="w-full flex">
+                <p class="text-lg font-bold">Released date:</p>
+                <p class="mt-0.5 ml-1">{{movie.ReleasedDate}}</p>
+            </div>
+            <div class="w-4/6 flex mt-4">
+                <p class="text-lg font-bold">Synopsis:</p>
+                <p class="mt-0.5 ml-1">{{movie.Description}}</p>
+            </div>    
+        </div>
+    </div>
+
+    <div class="w-full flex justify-center items-center mt-8 mb-20">
+        <iframe width="560" height="315" 
+        [src]='videoURL()' 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen></iframe>
+    </div>
+</div>

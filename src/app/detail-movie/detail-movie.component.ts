@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 @Component({
   selector: 'app-detail-movie',
   templateUrl: './detail-movie.component.html',
@@ -9,22 +9,25 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class DetailMovieComponent implements OnInit {
   
   movie:object|any = {};
-  watchlist: any[] = [];
+  watchlist:any[] = [];
   sanitizer:string|any = {};
+  movieUrl:string|any = {};
 
   constructor(protected _sanitizer: DomSanitizer) {}
 
   ngOnInit() {
     this.movie = this.getMovie();
     this.watchlist = this.getWatchlist();
+    this.movieUrl = this._sanitizer.bypassSecurityTrustResourceUrl(this.movie.TrailerLink);
   }
 
   inWatchlist() {
     let isInWatchlist = false;
-    this.watchlist.forEach(movie => {
-      if(movie.Title === this.movie.Title) isInWatchlist = true;
-    });
-
+    if(this.watchlist?.length) {
+      this.watchlist.forEach(movie => {
+        if(movie.Title === this.movie.Title) isInWatchlist = true;
+      });
+    }
     return isInWatchlist;
   }
   
@@ -43,7 +46,6 @@ export class DetailMovieComponent implements OnInit {
     localStorage.setItem('watchlist', JSON.stringify(this.watchlist));
   }
 
-
   removeraWatchlist(movieToDelete:any) {
     const position = this.watchlist.findIndex(movie => movie.Title === movieToDelete.Title);
     this.watchlist.splice(position, 1);
@@ -52,10 +54,6 @@ export class DetailMovieComponent implements OnInit {
   getWatchlist(): any | null {
     const watchlist = JSON.parse(localStorage.getItem('watchlist')!);
     return watchlist;
-  }
-
-  videoURL() {
-    return this._sanitizer.bypassSecurityTrustResourceUrl(this.movie.TrailerLink);
   }
 
   getMovie(): object | null {

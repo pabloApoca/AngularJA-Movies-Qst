@@ -64,7 +64,6 @@ export class HomeComponent implements OnInit {
     
     localStorage.setItem('movies', JSON.stringify(this.movies));
   }
-  
 
   sortByTtle() {
     const orderMovies = this.movies.sort((a,b) => a.Title.localeCompare(b.Title));

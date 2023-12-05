@@ -1,0 +1,19 @@
+<div class="w-full">
+    <div (click)="selectMovie()" class="relative card m-2 group cursor-pointer overflow-hidden
+     text-gray-50 h-auto w-full rounded-2xl hover:duration-700 duration-700 flex">
+      <img [ngSrc]="movie.img" width="100" height="100">
+      <div class="w-full flex flex-col">
+        <span class="text-slate-900 font-bold text-xs">{{movie.Title}}</span>
+        <span class="text-slate-900 font-bold text-xs">{{movie.Rating}}</span>
+        <span class="text-slate-900 font-bold text-xs">{{movie.ReleasedDate}}</span>
+        <span class="text-slate-900 font-bold text-xs">{{movie.Genre}}</span>
+      </div>
+      <div class="absolute bg-gray-50 -bottom-6 w-full h-14 px-3 py-2 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
+        <span class="text-slate-900 font-bold text-xs">{{movie.Title}}</span>
+        <div class="w-full flex justify-between">
+          <span class="text-neutral-800 font-bold">{{movie.ReleasedDate.substr(-4)}}</span>
+          <span class="text-neutral-800 text-xs mt-1">{{movie.Genre}}</span>
+        </div>
+      </div>
+    </div>
+</div>

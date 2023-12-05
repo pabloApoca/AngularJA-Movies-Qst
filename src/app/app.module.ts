@@ -11,13 +11,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MovieComponent } from './movie/movie.component';
 import { DetailMovieComponent } from './detail-movie/detail-movie.component';
 import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { WatchlistComponent } from './watchlist/watchlist.component';
+import { MovieWatchlistComponent } from './movie-watchlist/movie-watchlist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieComponent,
     DetailMovieComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent,
+    WatchlistComponent,
+    MovieWatchlistComponent
   ],
   imports: [
     BrowserModule,

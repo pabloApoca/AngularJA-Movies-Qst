@@ -21,14 +21,8 @@
 
 <mat-divider></mat-divider>
 
-<div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center mb-20">
-  <div class="w-full flex justify-center items-center mt-10">
-    <app-movie [movie]="movie" *ngFor="let movie of filterMovies"> </app-movie>
-  </div>
-  <div class="w-full flex justify-center items-center mt-10">
-    <app-movie [movie]="movie" *ngFor="let movie of filterMovies"></app-movie>
-  </div>
-  <div class="w-full flex justify-center items-center mt-10">
+<div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center justify-center mb-20">
+  <div class="grid grid-cols-4 gap-4 justify-center items-center mt-10">
     <app-movie [movie]="movie" *ngFor="let movie of filterMovies"></app-movie>
   </div>
 </div>

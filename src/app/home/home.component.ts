@@ -60,6 +60,56 @@ export class HomeComponent implements OnInit {
         'Genre': 'Action, Adventure, Sci-Fi',
         'ReleasedDate': '1 May 2015',
         'TrailerLink': 'https://www.youtube.com/embed/tmeOjFno6Do?si=Bolyry_tHP9I82e4',
+      },
+      {
+        'Title': 'The Bad Guys: A Very Bad Holiday',
+        'Description': 'In order to carry out his annual super Christmas heist, Lobo and his band of animal thieves will have to get the city back into the holiday spirit... and fast!.',
+        'Rating': 6.8,
+        'img': './assets/the-bad-guys-a-very-bad-holiday.jpg',
+        'Duration': '2h 10min',
+        'Genre': 'Animation, Adventure, Comedy',
+        'ReleasedDate': '18 October 2022',
+        'TrailerLink': 'https://www.youtube.com/embed/TsDznqvHVPE?si=SbUSiVc0_pIdd8iR',
+      },
+      {
+        'Title': 'The Shepherd',
+        'Description': 'On Christmas Eve, a fighter pilot returning home gets lost mid-flight over water and needs a miracle to land safely.',
+        'Rating': 7.9,
+        'img': './assets/the-shepherd.jpg',
+        'Duration': '39min',
+        'Genre': 'Drama',
+        'ReleasedDate': '1 October 2023',
+        'TrailerLink': 'https://www.youtube.com/embed/o3-5U1I-wRk?si=5OKpUrawAcEvdmmy',
+      },
+      {
+        'Title': 'The Collective',
+        'Description': 'A group of righteous assassins called The Collective target a highly sophisticated human trafficking ring backed by a network of untouchable billionaires. With their backs against the wall, The Collective has no choice but to put their most important mission in the hands of rookie assassin Sam Alexander.',
+        'Rating': 9.8,
+        'img': './assets/the-collective.jpg',
+        'Duration': '1h 45min',
+        'Genre': 'Drama, Action',
+        'ReleasedDate': '19 July 2023',
+        'TrailerLink': 'https://www.youtube.com/embed/5UbiOLp-FsA?si=Sj8fFmykG-8XDGjb',
+      },
+      {
+        'Title': 'Family Switch',
+        'Description': 'Shortly before Christmas, chaos shakes a family: by a strange cosmic conjunction, the parents exchange their bodies with those of their teenage children.',
+        'Rating': 5.8,
+        'img': './assets/family-switch.jpg',
+        'Duration': '1h 45min',
+        'Genre': 'Adventure, Comedy',
+        'ReleasedDate': '2 July 2023',
+        'TrailerLink': 'https://www.youtube.com/embed/SWh4c9EVqGM?si=unuRQi49ISzhE-0U',
+      },
+      {
+        'Title': 'Family Switch',
+        'Description': 'Seven-year-old William receives a new toy for Christmas, meets a friend who will last a lifetime, and enters a magical world.',
+        'Rating': 7.9,
+        'img': './assets/the-velveteen-rabbit.jpg',
+        'Duration': '44min',
+        'Genre': 'Adventure, Comedy, Animation',
+        'ReleasedDate': '22 November 2023',
+        'TrailerLink': 'https://www.youtube.com/embed/49R6Ri6oV3E?si=kahPlu0bb695nuVo',
       }
     ];
     
@@ -67,6 +117,7 @@ export class HomeComponent implements OnInit {
     this.filterMovies = this.movies;
 
   }
+
   restartFilter() {
     this.filterMovies = this.movies;
   }
@@ -74,7 +125,7 @@ export class HomeComponent implements OnInit {
   filterByGender(gender:string){
     const movieFilter: any[] = [];
     this.movies.forEach(movie => {
-      if(movie.Genre.includes(gender))  movieFilter.push(movie);
+      if(movie.Genre.includes(gender)) movieFilter.push(movie);
     })
     this.filterMovies = movieFilter;
   }

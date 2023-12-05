@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { ServiceMoviesService } from '../service-movies.service';
 
 @Component({
   selector: 'app-movie-watchlist',
@@ -9,14 +10,19 @@ import { Router } from '@angular/router';
 export class MovieWatchlistComponent {
 
   @Input() movie:any;
+  
   onWatchlist:boolean|any = {};
   watchlist:any[] = [];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private service:ServiceMoviesService) {}
 
   ngOnInit() {
     this.watchlist = this.getWatchlist();
     this.onWatchlist = this.isOnWatchlist();
+  }
+
+  removeraWatchlist() {
+    this.service.deleteMovie.emit({data: this.movie})
   }
 
   isOnWatchlist() {

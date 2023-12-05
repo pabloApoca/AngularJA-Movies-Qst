@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 
-<div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center my-20 w-full">
+<div class="container px-3 mx-auto flex flex-col items-center justify-center my-20 w-full h-5/6">
   <div class="w-full flex flex-col justify-center items-center mt-10">
-    <app-movie-watchlist [movie]="movie" *ngFor="let movie of watchlist"> </app-movie-watchlist>
+    <app-movie-watchlist class="w-full flex justify-center" [movie]="movie" *ngFor="let movie of watchlist"> </app-movie-watchlist>
   </div>
 </div>

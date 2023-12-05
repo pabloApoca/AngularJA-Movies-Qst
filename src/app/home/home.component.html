@@ -1,13 +1,14 @@
 <app-navbar></app-navbar>
 
-<div class="w-full mt-20 mb-3 flex justify-center items-center gap-2">
-  <button mat-raised-button>Action</button>
-  <button mat-raised-button>Animation</button>
-  <button mat-raised-button>Sci-Fi</button>
-  <button mat-raised-button>Adventure</button>
-  <button mat-raised-button>Comedy</button>
-  <button mat-raised-button>Crime</button>
-  <button mat-raised-button>Drama</button>
+<div class="w-full mt-24 mb-3 flex justify-center items-center gap-2">
+  <button mat-raised-button (click)="filterByGender('Action')">Action</button>
+  <button mat-raised-button (click)="filterByGender('Animation')">Animation</button>
+  <button mat-raised-button (click)="filterByGender('Sci-Fi')">Sci-Fi</button>
+  <button mat-raised-button (click)="filterByGender('Adventure')">Adventure</button>
+  <button mat-raised-button (click)="filterByGender('Comedy')">Comedy</button>
+  <button mat-raised-button (click)="filterByGender('Crime')">Crime</button>
+  <button mat-raised-button (click)="filterByGender('Drama')">Drama</button>
+  <button mat-raised-button color="warn" (click)="restartFilter()">Restart</button>
 </div>
 
 <mat-divider></mat-divider>
@@ -22,12 +23,12 @@
 
 <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center mb-20">
   <div class="w-full flex justify-center items-center mt-10">
-    <app-movie [movie]="movie" *ngFor="let movie of movies"> </app-movie>
+    <app-movie [movie]="movie" *ngFor="let movie of filterMovies"> </app-movie>
   </div>
   <div class="w-full flex justify-center items-center mt-10">
-    <app-movie [movie]="movie" *ngFor="let movie of movies"></app-movie>
+    <app-movie [movie]="movie" *ngFor="let movie of filterMovies"></app-movie>
   </div>
   <div class="w-full flex justify-center items-center mt-10">
-    <app-movie [movie]="movie" *ngFor="let movie of movies"></app-movie>
+    <app-movie [movie]="movie" *ngFor="let movie of filterMovies"></app-movie>
   </div>
 </div>

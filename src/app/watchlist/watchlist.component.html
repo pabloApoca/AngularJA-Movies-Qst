@@ -6,8 +6,8 @@
       <app-movie-watchlist class="w-full flex justify-center" [movie]="movie" *ngFor="let movie of watchlist"> </app-movie-watchlist>
     </div>
   </div>
-  <div *ngIf="!watchlist.length" class="w-full items-center justify-center mt-40">
-    <p class="text-yellow-400 font-bold text-3xl text-center">There are no movies in your watchlist.</p>
+  <div *ngIf="!watchlist.length" class="w-full items-center justify-center mt-60">
+    <p class="text-white font-bold text-3xl text-center">There are no movies in your watchlist.</p>
   </div>
   
   <app-footer class="static w-full bottom-0"></app-footer>

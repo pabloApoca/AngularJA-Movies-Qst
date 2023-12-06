@@ -42,6 +42,11 @@
             <div class="my-4 w-96 myButton">
                 <button (click)="addWatchlist()"> <span>{{inWatchlist() ? 'Remove from watchlist' : 'Add to Watchlist'}}</span> </button>
             </div>            
+            <div class="mb-4 w-96 myButton flex justify-center">
+                <div class="w-48 myButton">
+                    <button (click)="seeMovie = true"> <span>Play Movie</span> </button>
+                </div>
+            </div>            
         </div>
     </div>
 
@@ -53,6 +58,18 @@
                 allowfullscreen>
             </iframe>
         </div>
+    </div>
+</div>
+
+<div *ngIf="seeMovie" class="w-full h-screen flex justify-center items-center absolute top-0">
+    <div class="w-full h-screen bg-black opacity-50 flex justify-center items-center absolute top-0" (click)="seeMovie = false">
+    </div>
+    <div class="z-50">
+        <iframe width="1000" height="700" [src]='movieUrl' 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
     </div>
 </div>
 

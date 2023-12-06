@@ -13,6 +13,7 @@ export class DetailMovieComponent implements OnInit {
   watchlist:Movie[] = [];
   sanitizer:string|any = {};
   movieUrl:string|any = {};
+  seeMovie:boolean = false;
 
   constructor(protected _sanitizer: DomSanitizer) {}
 

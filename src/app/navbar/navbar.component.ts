@@ -21,6 +21,10 @@ export class NavbarComponent implements OnInit {
     window.removeEventListener('scroll', this.scrollEvent, true);
   }
 
+  goLogin() {
+    this.router.navigate(['/login']);
+  }
+
   goHome() {
     this.router.navigate(['/']);
   }

@@ -14,6 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { WatchlistComponent } from './watchlist/watchlist.component';
 import { MovieWatchlistComponent } from './movie-watchlist/movie-watchlist.component';
+import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { MovieWatchlistComponent } from './movie-watchlist/movie-watchlist.compo
     HomeComponent,
     NavbarComponent,
     WatchlistComponent,
-    MovieWatchlistComponent
+    MovieWatchlistComponent,
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

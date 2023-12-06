@@ -102,14 +102,34 @@ export class HomeComponent implements OnInit {
         'TrailerLink': 'https://www.youtube.com/embed/SWh4c9EVqGM?si=unuRQi49ISzhE-0U',
       },
       {
-        'Title': 'Family Switch',
+        'Title': 'The velveteen rabbit',
         'Description': 'Seven-year-old William receives a new toy for Christmas, meets a friend who will last a lifetime, and enters a magical world.',
         'Rating': 7.9,
         'img': './assets/the-velveteen-rabbit.jpg',
-        'Duration': '44min',
+        'Duration': '1h 30min',
         'Genre': 'Adventure, Comedy, Animation',
         'ReleasedDate': '22 November 2023',
         'TrailerLink': 'https://www.youtube.com/embed/49R6Ri6oV3E?si=kahPlu0bb695nuVo',
+      },
+      {
+        'Title': 'Sacrifice',
+        'Description': 'Isaac and his pregnant wife visit a remote Norwegian village to claim an unexpected inheritance. The couple find themselves trapped in a nightmare when they encounter a sinister sect that worships a sea-dwelling deity.',
+        'Rating': 8.2,
+        'img': './assets/sacrifice.jpg',
+        'Duration': '2h 00min',
+        'Genre': 'Crime, Drama',
+        'ReleasedDate': '18 April 2021',
+        'TrailerLink': 'https://www.youtube.com/embed/igUyQPawlps?si=hM11cIBrmi_E4y_8',
+      },
+      {
+        'Title': 'The Marvels',
+        'Description': 'When her duties send her into a wormhole linked to a Kree revolutionary, the powers of Carol Danvers, Captain Marvel, intertwine with those of Kamala Khan, also known as Ms. Marvel and Carol´s niece, now an astronaut. S.A.B.E.R., Monica Rambeau. Together, they must save the universe as The Marvels.',
+        'Rating': 9.1,
+        'img': './assets/the-marvels.jpg',
+        'Duration': '1h 39min',
+        'Genre': 'Action, Adventure, Sci-Fi',
+        'ReleasedDate': '1 June 2023',
+        'TrailerLink': 'https://www.youtube.com/embed/wS_qbDztgVY?si=q-A6opSZ6TSD94fj',
       }
     ];
     

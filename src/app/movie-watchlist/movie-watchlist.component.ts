@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServiceMoviesService } from '../service-movies.service';
+import { Movie } from '../models/models';
 
 @Component({
   selector: 'app-movie-watchlist',
@@ -9,10 +10,10 @@ import { ServiceMoviesService } from '../service-movies.service';
 })
 export class MovieWatchlistComponent {
 
-  @Input() movie:any;
+  @Input() movie:Movie;
   
-  onWatchlist:boolean|any = {};
-  watchlist:any[] = [];
+  onWatchlist:boolean = false;
+  watchlist:Movie[] = [];
 
   constructor(private router: Router, private service:ServiceMoviesService) {}
 
@@ -21,11 +22,11 @@ export class MovieWatchlistComponent {
     this.onWatchlist = this.isOnWatchlist();
   }
 
-  removeraWatchlist() {
+  removeraWatchlist():void {
     this.service.deleteMovie.emit({data: this.movie})
   }
 
-  isOnWatchlist() {
+  isOnWatchlist() :boolean {
     let isInWatchlist = false;
     if(this.watchlist?.length) {
       this.watchlist.forEach(movie => {
@@ -35,12 +36,12 @@ export class MovieWatchlistComponent {
     return isInWatchlist;
   }
 
-  getWatchlist(): any | null {
+  getWatchlist(): Movie[] {
     const watchlist = JSON.parse(localStorage.getItem('watchlist')!);
     return watchlist;
   }
 
-  selectMovie() {
+  selectMovie() :void {
     localStorage.setItem('movie', JSON.stringify(this.movie));
     this.router.navigate(['/movie',this.movie.Title]);
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Movie } from '../models/models';
 @Component({
   selector: 'app-detail-movie',
   templateUrl: './detail-movie.component.html',
@@ -8,8 +9,8 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 export class DetailMovieComponent implements OnInit {
   
-  movie:object|any = {};
-  watchlist:any[] = [];
+  movie:Movie|any = {};
+  watchlist:Movie[] = [];
   sanitizer:string|any = {};
   movieUrl:string|any = {};
 
@@ -46,7 +47,7 @@ export class DetailMovieComponent implements OnInit {
     localStorage.setItem('watchlist', JSON.stringify(this.watchlist));
   }
 
-  removeraWatchlist(movieToDelete:any) {
+  removeraWatchlist(movieToDelete:any) :void{
     const position = this.watchlist.findIndex(movie => movie.Title === movieToDelete.Title);
     this.watchlist.splice(position, 1);
   }

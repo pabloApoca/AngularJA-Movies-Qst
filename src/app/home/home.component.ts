@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from '../models/models';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  movies: any[] = [];
-  filterMovies: any[] = [];
+  movies: Movie[] = [];
+  filterMovies: Movie[] = [];
 
   ngOnInit() {
     this.movies = [
@@ -138,29 +139,29 @@ export class HomeComponent implements OnInit {
 
   }
 
-  restartFilter() {
+  restartFilter():void {
     this.filterMovies = this.movies;
   }
 
-  filterByGender(gender:string){
-    const movieFilter: any[] = [];
+  filterByGender(gender:string) :void{
+    const movieFilter: Movie[] = [];
     this.movies.forEach(movie => {
       if(movie.Genre.includes(gender)) movieFilter.push(movie);
     })
     this.filterMovies = movieFilter;
   }
 
-  sortByTtle() {
+  sortByTtle() :void{
     const orderMovies = this.filterMovies.sort((a,b) => a.Title.localeCompare(b.Title));
     this.filterMovies = orderMovies;
   }
   
-  sortByRating() {
+  sortByRating() :void{
     const orderMovies = this.filterMovies.slice().sort((a, b) => b.Rating - a.Rating );
     this.filterMovies = orderMovies;
   }
   
-  sortByReleasedDate() {
+  sortByReleasedDate() :void{
     const orderMovies = this.filterMovies.slice().sort((a, b) => this.converToDate(b.ReleasedDate) - this.converToDate(a.ReleasedDate));
     this.filterMovies = orderMovies;
   }

@@ -69,3 +69,14 @@
     rotate: 10deg;
   }
 }
+
+.card {
+  box-shadow: -9px 9px 18px #5a5a5a,
+              9px -9px 18px #ffffff;
+  transition: .4s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 10px 2px #5a5a5a;
+}

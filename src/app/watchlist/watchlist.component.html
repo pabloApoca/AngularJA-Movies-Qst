@@ -1,12 +1,12 @@
 <app-navbar></app-navbar>
 
 <div class="w-full h-full relative flex flex-col justify-between">
-  <div *ngIf="watchlist.length" class="container px-3 mx-auto flex flex-col items-center justify-start my-20 w-full">
+  <div *ngIf="watchlist?.length" class="container px-3 mx-auto flex flex-col items-center justify-start my-20 w-full">
     <div class="w-full flex flex-col justify-center items-center mt-10">
       <app-movie-watchlist class="w-full flex justify-center" [movie]="movie" *ngFor="let movie of watchlist"> </app-movie-watchlist>
     </div>
   </div>
-  <div *ngIf="!watchlist.length" class="w-full items-center justify-center mt-72">
+  <div *ngIf="!watchlist?.length" class="w-full items-center justify-center mt-72">
     <p class="text-white font-bold text-3xl text-center">There are no movies in your watchlist.</p>
   </div>
   

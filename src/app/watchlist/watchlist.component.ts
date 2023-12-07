@@ -19,6 +19,7 @@ export class WatchlistComponent {
       const position = this.watchlist.findIndex(movie => movie.Title === data.Title);
       this.watchlist.splice(position, 1);
       localStorage.setItem('watchlist', JSON.stringify(this.watchlist));
+      console.log(this.watchlist)
     })
   }
 
